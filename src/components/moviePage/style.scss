@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@300;400;700&display=swap');
+
+#mainMoviePage {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    h1 {
+
+        font-family: 'League Gothic', sans-serif;
+        font-size: 10rem;
+        text-transform: uppercase;
+        position: absolute;
+        transform: translate(-50%, 50%);
+        color: rgba(0,0,0,0);
+        -webkit-text-stroke: 0.01px white;
+
+    }
+
+    h2 {
+
+        font-family: 'League Gothic', sans-serif;
+        font-size: 5rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+
+    }
+
+    .imgWrapper {
+
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+
+        img {
+
+            min-width: 100%;
+            min-height: 100%;
+
+        }
+
+    }
+
+}
