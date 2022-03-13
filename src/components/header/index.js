@@ -24,18 +24,12 @@ export default function Header() {
 
                     <li><span>Filmes</span></li>
                     <li><span>Séries</span></li>
+                    <li><span>Filmes em cartaz</span></li>
                     <li><span>Shows</span></li>
 
                 </ul>
 
             </nav>
-
-            {/* <ul className="socialMedias">
-
-                <li><img src={Search} alt="search" /></li>
-                <li><img src={Profile} alt="profile" /></li>
-
-            </ul> */}
 
         </header>
 

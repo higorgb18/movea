@@ -1,42 +1,38 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import Movie from '../Movie';
+import Upcoming from '../Upcoming';
 
 import './style.scss';
 
 export default function Sidebar() {
 
-    const [moviesData, setMoviesData] = useState([]);
+    const [upcomingMovies, setUpcomingMovies] = useState([]);
 
     useEffect(() => {
 
-        fetch(FEATURED_API)
+        fetch(UPCOMING_API)
             .then(response => response.json())
             .then(data => {
-                setMoviesData(data.results)
+                setUpcomingMovies(data.results)
                 console.log(data.results)
             });
 
     }, [])
 
-    const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=60b7c69d9a69307c75b6f7ff1e7653bd&page=1";
+    const UPCOMING_API = "https://api.themoviedb.org/3/movie/upcoming?api_key=60b7c69d9a69307c75b6f7ff1e7653bd&language=pt-BR&page=1"
 
     return (
 
-        <aside>
+        <aside className="upcomingMoviesAside">
 
-            <legend>Novos trailers</legend>
+            <legend>Em breve</legend>
 
-            <div className="trailerWrapper">
+            <div className="upcomingWrapper">
 
-                <div className="movieBoxWrapper">
-
-                    {/* {moviesData.length > 0 && moviesData.map((movie) => (
-                        <Movie key={movie.id} {...movie} />
-                    ))} */}
-
-                </div>
+                {upcomingMovies.length > 0 && upcomingMovies.map((movie) => (
+                    <Upcoming key={movie.id} {...movie} />
+                ))}
 
             </div>
 
