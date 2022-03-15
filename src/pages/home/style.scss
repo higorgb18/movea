@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 #home {
 
     display: flex;
@@ -27,9 +29,10 @@
 
         display: flex;
         flex-direction: column;
-        min-width: 60%;
-        max-width: 80%;
         margin: 2rem 0 0 1rem;
+        overflow: hidden;
+        width: auto;
+        width: 100%;
 
         .textIntroWrapper {
 
@@ -100,6 +103,12 @@
                     object-fit: cover;
                     border-radius: 16px;
                     filter: contrast(90%);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                     -khtml-user-select: none;
+                       -moz-user-select: none;
+                        -ms-user-select: none;
+                            user-select: none;
             
                 }
         
@@ -111,6 +120,7 @@
                 width: 80%;
                 bottom: 5%;
                 left: 5%;
+                user-select: none;
 
                 h3 {
 

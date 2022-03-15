@@ -63,6 +63,7 @@ export default function Home(props) {
       <main id="mainHome">
 
         {/* <Sidebar /> */}
+        <ProfileBar />
 
         <section className="sectionTrending">
 
@@ -86,14 +87,12 @@ export default function Home(props) {
           >
             {trendingMovies.length > 0 && trendingMovies.map((trending) => (
               <SwiperSlide>
-                <Trending key={trending.id} {...trending} />
+                <Trending selectable="false" key={trending.id} {...trending} />
               </SwiperSlide>
             ))}
           </Swiper>
 
         </section>
-
-        <ProfileBar />
 
       </main>
 
