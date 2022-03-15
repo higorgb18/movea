@@ -1,9 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-
+import Search from '../../images/search.svg';
 
 import './style.scss';
 
@@ -43,10 +41,21 @@ export default function ProfileBar() {
 
             <div className="searchBar">
                 
-                <FontAwesomeIcon icon={faSearch} /> 
+                <img src={Search} alt="lupa de busca" />
                 < input type="text" placeholder="Buscar" />
 
             </div>
+
+            <ul className="list">
+
+                <li>
+                    <a className={displayProfileBar ? 'activeBtn' : ''} href="#">
+                        <img src={Search} alt="lupa de busca" />
+                        <span>Teste</span>
+                    </a>
+                </li>
+
+            </ul>
 
         </aside>
 
